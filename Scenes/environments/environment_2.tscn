@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://di88bbsniyf5g" path="res://detect.gd" id="1_x0881"]
 [ext_resource type="Texture2D" uid="uid://dqt0bfiwnjah3" path="res://assets/bigasset/lastAssets_concTexture_2.png" id="2_baub7"]
 [ext_resource type="Texture2D" uid="uid://ckudf4kmwmaxi" path="res://assets/bigasset/lastAssets_NormalMap (4).png" id="3_0cs4w"]
-[ext_resource type="PackedScene" uid="uid://da8ol3u3i0lek" path="res://floor.tscn" id="4_baub7"]
+[ext_resource type="PackedScene" uid="uid://da8ol3u3i0lek" path="res://Scenes/environments/floor.tscn" id="4_baub7"]
 [ext_resource type="Texture2D" uid="uid://dniylct3qd1vr" path="res://assets/bigasset/assetupdate02 (1)_Screenshot 2026-07-14 184104_3.png" id="5_opc3n"]
 [ext_resource type="Texture2D" uid="uid://cmqansm4a0xae" path="res://assets/bigasset/assetupdate02 (1)_Screenshot 2026-07-14 184121.png" id="6_um57v"]
 [ext_resource type="Texture2D" uid="uid://q8rhpcii01v6" path="res://assets/bigasset/assetupdate02 (1)_NormalMap (1).png" id="7_03q8h"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bngq2ryyi4bw0" path="res://assets/floor/modularassetglb_Screenshot 2026-07-13 130705.png" id="9_3181v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kow8y"]
-size = Vector3(5.4658203, 0.001, 112)
+size = Vector3(14, 3, 124)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_olkow"]
 resource_name = "Material.094"
@@ -24,7 +24,7 @@ normal_scale = 2.0
 normal_texture = ExtResource("3_0cs4w")
 metadata/_gltf_primary_texture_coord = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_rong4"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_opc3n"]
 _surfaces = [{
 "aabb": AABB(-1, -1, -1, 2, 2, 2),
 "format": 34896613377,
@@ -54,7 +54,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAD//wAAAAAAAP//AAAAAP+//////////7//////AAD/v///AAD///+///8AAP//AIAAAP////8AgP///////wCAAAAAAP//AIAAAAAAAAD/P///AAD///8///8AAAAA/z8AAAAA////P/////8AAP+/AAD//////78AAP//AAD/v/////////+//z//f/8//3//P/9//z//f////3////9/////f////3//fwAA/38AAP9/AAD/fwAA/3////9/////f////3///wAA/38AAP9/AAD/fwAA/3////9/////f////3////9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_rong4")
+shadow_mesh = SubResource("ArrayMesh_opc3n")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v6y76"]
 size = Vector3(7, 0.001, 11)
@@ -410,7 +410,7 @@ shadow_mesh = SubResource("ArrayMesh_wa3gy")
 script = ExtResource("1_x0881")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="detect" unique_id=1206400396]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.020019531, -0.49950004, 33.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2470703, 1, 39.5)
 shape = SubResource("BoxShape3D_kow8y")
 
 [node name="sidewalks" type="Node3D" parent="." unique_id=2092394411]

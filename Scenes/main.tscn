@@ -1,16 +1,15 @@
-[gd_scene format=4 uid="uid://dik8velmkso6h"]
+[gd_scene format=4 uid="uid://d1pmlv5dbmkr4"]
 
-[ext_resource type="PackedScene" uid="uid://81uyqw2oeonu" path="res://block.tscn" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://da8ol3u3i0lek" path="res://floor.tscn" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://da8ol3u3i0lek" path="res://Scenes/environments/floor.tscn" id="1_1bvp3"]
 [ext_resource type="Script" uid="uid://cavinbiepqact" path="res://main.gd" id="1_7mycd"]
-[ext_resource type="PackedScene" uid="uid://c2l74nuu83hp5" path="res://kotse.tscn" id="3_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://df086akwx1p47" path="res://tao.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://3rupdx00utnu" path="res://HUD.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://c2l74nuu83hp5" path="res://Scenes/vehicles/kotse.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://df086akwx1p47" path="res://Scenes/tao.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://3rupdx00utnu" path="res://Scenes/HUD.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cb1mso1oaapuj" path="res://assets/floor/modularassetglb.glb" id="7_272bh"]
 [ext_resource type="Texture2D" uid="uid://ch6dsomf1b7op" path="res://assets/floor/modularassetglb_5D35DF60-B52E-4ABC-9C5A-3DD31C7FF44E.png" id="8_kek77"]
 [ext_resource type="Texture2D" uid="uid://d04q7qp3cdp43" path="res://assets/floor/modularassetglb_NormalMap.png" id="9_4c57u"]
-[ext_resource type="PackedScene" uid="uid://ckgvcjvqd5gik" path="res://tubig.tscn" id="10_4c57u"]
-[ext_resource type="PackedScene" uid="uid://d04ymdpukmmgl" path="res://coin.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://ckgvcjvqd5gik" path="res://Scenes/collectibles/tubig.tscn" id="10_4c57u"]
+[ext_resource type="PackedScene" uid="uid://d04ymdpukmmgl" path="res://Scenes/collectibles/coin.tscn" id="11_efxa6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jgyi3"]
 resource_name = "Material.001"
@@ -72,9 +71,6 @@ autostart = true
 
 [node name="HUD" parent="." unique_id=847975927 instance=ExtResource("5_lquwl")]
 
-[node name="block" parent="." unique_id=1235168093 instance=ExtResource("1_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 0.5635768, -0.8260637, 0, 0.8260637, 0.5635768, -1.8869829, 4.964431, 5.6294403)
-
 [node name="tao" parent="." unique_id=351256526 instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.528748, -0.13680363, 0.17104435)
 
@@ -92,7 +88,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -19)
 [node name="Vehicles" type="Node3D" parent="." unique_id=1347566837]
 
 [node name="kotse1" parent="Vehicles" unique_id=831943765 instance=ExtResource("3_1bvp3")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.93018, 0, -26.469746)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.93018, 0, -10.469746)
 move_left = false
 
 [node name="kotse2" parent="Vehicles" unique_id=783730654 instance=ExtResource("3_1bvp3")]
