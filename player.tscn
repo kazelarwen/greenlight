@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cx1tvr4bno2ao"]
+
+[ext_resource type="PackedScene" uid="uid://df086akwx1p47" path="res://Scenes/tao.tscn" id="1_4flbx"]
+
+[node name="Player" type="Node3D" unique_id=1712714824]
+
+[node name="tao" parent="." unique_id=351256526 instance=ExtResource("1_4flbx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5749389, 0, 0.71021247)
+
+[node name="Camera3D" type="Camera3D" parent="tao" unique_id=900742685]
+transform = Transform3D(-1, -2.2211882e-08, 8.4553974e-08, 0, 0.9671847, 0.2540743, -8.742278e-08, 0.2540743, -0.9671847, 0.7102131, 8.69478, -9.156765)
+
+[editable path="tao"]
+[editable path="tao/student"]
