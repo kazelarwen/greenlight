@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d04ymdpukmmgl"]
+
+[ext_resource type="Script" uid="uid://6nirfvor0msm" path="res://coin.gd" id="1_0t63x"]
+[ext_resource type="Texture2D" uid="uid://cundnff7vlt1u" path="res://assets/modals/coin.png" id="1_d5gmh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5h11f"]
+
+[node name="coin" type="Area3D" unique_id=1633129997]
+script = ExtResource("1_0t63x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1009827727]
+shape = SubResource("SphereShape3D_5h11f")
+
+[node name="coin" type="Sprite3D" parent="." unique_id=1400075825]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+texture = ExtResource("1_d5gmh")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ckgvcjvqd5gik"]
+
+[ext_resource type="Script" uid="uid://dblcdi03r6a8w" path="res://tubig.gd" id="1_vak6t"]
+[ext_resource type="Texture2D" uid="uid://bqsdcu720q5px" path="res://assets/modals/waterbottle.png" id="2_o1enu"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jx8tp"]
+height = 2.9161987
+radius = 1.0
+
+[node name="tubig" type="Area3D" unique_id=1065633301]
+script = ExtResource("1_vak6t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=516246108]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.016, 0)
+shape = SubResource("CylinderShape3D_jx8tp")
+
+[node name="tubig" type="Sprite3D" parent="." unique_id=343246291]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+texture = ExtResource("2_o1enu")

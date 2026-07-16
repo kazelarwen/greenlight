@@ -1,0 +1,299 @@
+[gd_scene format=3 uid="uid://3rupdx00utnu"]
+
+[ext_resource type="Script" uid="uid://cm1bjchwvuxi4" path="res://HUD.gd" id="1_vow1y"]
+[ext_resource type="Texture2D" uid="uid://cvkrwymbegfen" path="res://assets/status/h3.png" id="2_efote"]
+[ext_resource type="Texture2D" uid="uid://c6vqvfs5ueoyo" path="res://assets/status/d3.png" id="3_vow1y"]
+[ext_resource type="Texture2D" uid="uid://caowc3pk8at3f" path="res://assets/status/uhaw_warning.png" id="4_ne771"]
+[ext_resource type="Texture2D" uid="uid://c0h2lomphnfcl" path="res://assets/modals/game-over-modal.png" id="5_gv1iq"]
+[ext_resource type="Texture2D" uid="uid://5pyanjsptw7j" path="res://assets/modals/banner.png" id="6_1and6"]
+[ext_resource type="Texture2D" uid="uid://dril5kwseovjd" path="res://assets/modals/pause-button.png" id="6_x6is5"]
+[ext_resource type="Texture2D" uid="uid://cqknr3b82pqxy" path="res://assets/modals/home-button.png" id="7_1and6"]
+[ext_resource type="FontFile" uid="uid://b8fxwfygekktu" path="res://assets/PixelifySans-VariableFont_wght.ttf" id="7_gbfpv"]
+[ext_resource type="Texture2D" uid="uid://dqiwpspt8dvan" path="res://assets/modals/restart-button.png" id="9_4x0me"]
+[ext_resource type="Texture2D" uid="uid://cundnff7vlt1u" path="res://assets/modals/coin.png" id="10_2afx3"]
+[ext_resource type="Texture2D" uid="uid://ct3k4q53n143n" path="res://assets/modals/pause-modal.png" id="11_4x0me"]
+[ext_resource type="Texture2D" uid="uid://cjbfkmj0xfd2" path="res://assets/modals/resume-button.png" id="12_2afx3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5h11f"]
+bg_color = Color(0.07450981, 0.07450981, 0.07450981, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="FontVariation" id="FontVariation_5h11f"]
+base_font = ExtResource("7_gbfpv")
+
+[sub_resource type="FontVariation" id="FontVariation_bx8n8"]
+base_font = ExtResource("7_gbfpv")
+
+[sub_resource type="FontVariation" id="FontVariation_5iqjx"]
+base_font = ExtResource("7_gbfpv")
+
+[sub_resource type="FontVariation" id="FontVariation_jx8tp"]
+base_font = ExtResource("7_gbfpv")
+
+[node name="HUD" type="CanvasLayer" unique_id=847975927]
+script = ExtResource("1_vow1y")
+
+[node name="Panel" type="Panel" parent="." unique_id=1664616485]
+offset_left = 30.0
+offset_top = 28.0
+offset_right = 188.0
+offset_bottom = 122.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5h11f")
+
+[node name="Hearts" type="TextureRect" parent="Panel" unique_id=245072530]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -1.0
+offset_right = 155.0
+offset_bottom = 43.0
+texture = ExtResource("2_efote")
+
+[node name="Droplets" type="TextureRect" parent="Panel" unique_id=1094781111]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 47.0
+offset_right = 164.0
+offset_bottom = 87.0
+texture = ExtResource("3_vow1y")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1780010562]
+offset_left = 912.0
+offset_top = 29.0
+offset_right = 1125.0
+offset_bottom = 123.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5h11f")
+
+[node name="PauseButton" type="TextureButton" parent="Panel2" unique_id=1021095487]
+process_mode = 2
+layout_mode = 0
+offset_left = 152.0
+offset_top = 3.0
+offset_right = 192.0
+offset_bottom = 43.0
+texture_normal = ExtResource("6_x6is5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CoinInfo" type="HBoxContainer" parent="Panel2" unique_id=781324121]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 57.0
+offset_right = 191.0
+offset_bottom = 96.0
+alignment = 2
+
+[node name="CoinIcon" type="TextureRect" parent="Panel2/CoinInfo" unique_id=676967486]
+layout_mode = 2
+texture = ExtResource("10_2afx3")
+
+[node name="CoinLabel" type="Label" parent="Panel2/CoinInfo" unique_id=708112190]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_5h11f")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="." unique_id=546233814]
+offset_left = 460.0
+offset_top = 22.0
+offset_right = 730.0
+offset_bottom = 146.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5h11f")
+
+[node name="DistanceLabel" type="Label" parent="Panel3" unique_id=277658029]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 262.0
+offset_bottom = 67.0
+theme_override_fonts/font = SubResource("FontVariation_5h11f")
+theme_override_font_sizes/font_size = 50
+text = "123456789"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Panel3" unique_id=707167935]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 78.0
+offset_right = 219.0
+offset_bottom = 117.0
+theme_override_fonts/font = SubResource("FontVariation_5h11f")
+theme_override_font_sizes/font_size = 32
+text = "123456789"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Uhaw" type="Panel" parent="." unique_id=1536921445]
+offset_left = 457.0
+offset_top = 509.0
+offset_right = 680.0
+offset_bottom = 596.0
+
+[node name="UhawWarning" type="TextureRect" parent="Uhaw" unique_id=759315284]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 219.0
+offset_bottom = 83.0
+texture = ExtResource("4_ne771")
+expand_mode = 1
+
+[node name="GameOver" type="Panel" parent="." unique_id=860875488]
+process_mode = 2
+offset_left = -29.0
+offset_top = -20.0
+offset_right = 1193.0
+offset_bottom = 686.0
+
+[node name="GameOverModal" type="TextureRect" parent="GameOver" unique_id=2021819243]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 98.0
+offset_right = 751.0
+offset_bottom = 580.0
+texture = ExtResource("5_gv1iq")
+expand_mode = 1
+
+[node name="Score" type="TextureRect" parent="GameOver/GameOverModal" unique_id=497357311]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 135.0
+offset_right = 280.0
+offset_bottom = 206.0
+texture = ExtResource("6_1and6")
+expand_mode = 1
+
+[node name="ScoreLabel" type="Label" parent="GameOver/GameOverModal/Score" unique_id=1401907328]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 25.0
+offset_right = 223.0
+offset_bottom = 50.0
+theme_override_fonts/font = SubResource("FontVariation_bx8n8")
+text = "sbssdfdfd"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreStatement" type="Label" parent="GameOver/GameOverModal/Score" unique_id=880601967]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 62.0
+offset_right = 218.0
+offset_bottom = 85.0
+theme_override_fonts/font = SubResource("FontVariation_5iqjx")
+theme_override_font_sizes/font_size = 13
+text = "NEW PERSONAL BEST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinInfo" type="HBoxContainer" parent="GameOver/GameOverModal" unique_id=322483610]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 268.0
+offset_right = 216.0
+offset_bottom = 302.0
+alignment = 1
+
+[node name="CoinIcon" type="TextureRect" parent="GameOver/GameOverModal/CoinInfo" unique_id=2091869130]
+layout_mode = 2
+texture = ExtResource("10_2afx3")
+stretch_mode = 2
+
+[node name="CoinLabel" type="Label" parent="GameOver/GameOverModal/CoinInfo" unique_id=1326948352]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_5h11f")
+text = "123456789"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DistanceLabel" type="Label" parent="GameOver/GameOverModal" unique_id=1261247708]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 239.0
+offset_right = 186.0
+offset_bottom = 262.0
+theme_override_fonts/font = SubResource("FontVariation_jx8tp")
+text = "101.8 km"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButton" type="TextureButton" parent="GameOver/GameOverModal" unique_id=663847778]
+texture_filter = 1
+layout_mode = 0
+offset_left = 27.0
+offset_top = 362.0
+offset_right = 284.0
+offset_bottom = 441.0
+texture_normal = ExtResource("7_1and6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RestartButton" type="TextureButton" parent="GameOver/GameOverModal" unique_id=1152549224]
+texture_filter = 1
+layout_mode = 0
+offset_left = 41.0
+offset_top = 318.0
+offset_right = 269.0
+offset_bottom = 375.0
+texture_normal = ExtResource("9_4x0me")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Pause" type="Panel" parent="." unique_id=1888621881]
+process_mode = 2
+offset_right = 1155.0
+offset_bottom = 650.0
+
+[node name="PauseModal" type="TextureRect" parent="Pause" unique_id=168227095]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 57.0
+offset_right = 750.0
+offset_bottom = 576.0
+texture = ExtResource("11_4x0me")
+expand_mode = 1
+
+[node name="RestartButton" type="TextureButton" parent="Pause/PauseModal" unique_id=223057457]
+texture_filter = 1
+layout_mode = 0
+offset_left = 68.0
+offset_top = 251.0
+offset_right = 296.0
+offset_bottom = 308.0
+texture_normal = ExtResource("9_4x0me")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ResumeButton" type="TextureButton" parent="Pause/PauseModal" unique_id=2084032557]
+texture_filter = 1
+layout_mode = 0
+offset_left = 59.0
+offset_top = 183.0
+offset_right = 311.0
+offset_bottom = 248.0
+texture_normal = ExtResource("12_2afx3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MenuButton" type="TextureButton" parent="Pause/PauseModal" unique_id=462733054]
+texture_filter = 1
+layout_mode = 0
+offset_left = 54.0
+offset_top = 300.0
+offset_right = 311.0
+offset_bottom = 379.0
+texture_normal = ExtResource("7_1and6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Panel2/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="GameOver/GameOverModal/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="GameOver/GameOverModal/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Pause/PauseModal/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Pause/PauseModal/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Pause/PauseModal/MenuButton" to="." method="_on_menu_button_pressed"]

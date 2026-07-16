@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dqoarjd3syrel"]
+
+[ext_resource type="Texture2D" uid="uid://chxw4rcqj3lpw" path="res://assets/modals/homepage.png" id="1_tt30a"]
+[ext_resource type="Script" uid="uid://dqbqighwy2cti" path="res://home.gd" id="1_w1mvj"]
+[ext_resource type="Texture2D" uid="uid://d1upaffhmia7p" path="res://assets/modals/start-button.png" id="2_2ayvv"]
+[ext_resource type="Texture2D" uid="uid://y2i36nqd4aew" path="res://assets/modals/options-button.png" id="3_w1mvj"]
+[ext_resource type="Texture2D" uid="uid://b4ps8c0fopsuu" path="res://assets/modals/Greenlight.png" id="5_w1mvj"]
+
+[node name="Home" type="CanvasLayer" unique_id=229947819]
+script = ExtResource("1_w1mvj")
+
+[node name="Panel" type="Panel" parent="." unique_id=147245328]
+offset_right = 1152.0
+offset_bottom = 644.0
+
+[node name="HomePage" type="TextureRect" parent="Panel" unique_id=1867900897]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 644.0
+texture = ExtResource("1_tt30a")
+expand_mode = 1
+
+[node name="StartButton" type="TextureButton" parent="Panel/HomePage" unique_id=2028457223]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 295.0
+offset_right = 750.0
+offset_bottom = 371.0
+texture_normal = ExtResource("2_2ayvv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="OptionsButton" type="TextureButton" parent="Panel/HomePage" unique_id=188045588]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 376.0
+offset_right = 750.0
+offset_bottom = 452.0
+texture_normal = ExtResource("3_w1mvj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GreenLight" type="TextureRect" parent="Panel/HomePage" unique_id=846551668]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 4.0
+offset_right = 984.0
+offset_bottom = 284.0
+texture = ExtResource("5_w1mvj")
+expand_mode = 1
+
+[connection signal="pressed" from="Panel/HomePage/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Panel/HomePage/OptionsButton" to="." method="_on_options_button_pressed"]

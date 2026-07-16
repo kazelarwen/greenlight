@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://d1pmlv5dbmkr4"]
+
+[ext_resource type="PackedScene" uid="uid://da8ol3u3i0lek" path="res://floor.tscn" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://cavinbiepqact" path="res://main.gd" id="1_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c2l74nuu83hp5" path="res://kotse.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://df086akwx1p47" path="res://tao.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://3rupdx00utnu" path="res://HUD.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://de73lg0tc18s1" path="res://environment_1.tscn" id="6_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://ccx1s10nh0wgr" path="res://yellow_ebike.tscn" id="7_dg77c"]
+[ext_resource type="PackedScene" uid="uid://dirv5k3ltcsev" path="res://environment_2.tscn" id="8_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://51p87xdpdckd" path="res://b_tric.tscn" id="8_vivmo"]
+[ext_resource type="PackedScene" uid="uid://cfkerlrjftfo2" path="res://g_tric.tscn" id="9_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://ckgvcjvqd5gik" path="res://tubig.tscn" id="10_4c57u"]
+[ext_resource type="PackedScene" uid="uid://cixuxbyy2r5sg" path="res://r_tric.tscn" id="10_yaehf"]
+[ext_resource type="PackedScene" uid="uid://bab68x2r3eesq" path="res://r_bus.tscn" id="11_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://d04ymdpukmmgl" path="res://coin.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://pt7iytpjhonf" path="res://g_jeep.tscn" id="12_yaehf"]
+[ext_resource type="PackedScene" uid="uid://b4d308jhbdygy" path="res://r_jeep.tscn" id="13_074og"]
+
+[node name="main" type="Node3D" unique_id=1337213791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
+script = ExtResource("1_7mycd")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=451922169]
+transform = Transform3D(0.24387515, 0.5850801, -0.773438, -0.04740343, 0.80375594, 0.5930677, 0.96864736, -0.10797087, 0.2237509, -23.97387, 13.471483, 13.300663)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=967860420]
+transform = Transform3D(0.6237829, 0.5162676, -0.5868243, -0.2136225, 0.83482695, 0.50737506, 0.751838, -0.19113302, 0.63103706, -25.738682, 16.408834, 12.938701)
+shadow_enabled = true
+
+[node name="HeatTimer" type="Timer" parent="." unique_id=1349217815]
+wait_time = 20.0
+autostart = true
+
+[node name="HUD" parent="." unique_id=847975927 instance=ExtResource("5_lquwl")]
+
+[node name="tao" parent="." unique_id=351256526 instance=ExtResource("3_h2yge")]
+transform = Transform3D(0.013081253, 0, 0.9999144, 0, 1, 0, -0.9999144, 0, 0.013081253, -20.736832, 0.41643763, 0.7420373)
+
+[node name="Waters" type="Node3D" parent="." unique_id=89448879]
+
+[node name="tubig1" parent="Waters" unique_id=1065633301 instance=ExtResource("10_4c57u")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0.42269138, 0.8727978, -0.24404095, -0.7558651, 0.48808193, 0.43639886, -6, 2.0944052, 12)
+
+[node name="tubig2" parent="Waters" unique_id=2025389789 instance=ExtResource("10_4c57u")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0.42269138, 0.8727978, -0.24404095, -0.7558651, 0.48808193, 0.43639886, -6, 2.0944052, -13)
+
+[node name="tubig3" parent="Waters" unique_id=446446610 instance=ExtResource("10_4c57u")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0.42269138, 0.8727978, -0.24404095, -0.7558651, 0.48808193, 0.43639886, -11, 2.0944052, 23)
+
+[node name="Coins" type="Node3D" parent="." unique_id=133416571]
+
+[node name="coin1" parent="Coins" unique_id=1633129997 instance=ExtResource("11_efxa6")]
+transform = Transform3D(-0.25881898, 0, -0.96592593, 0, 1, 0, 0.96592593, 0, -0.25881898, -13, 2, 3)
+
+[node name="coin2" parent="Coins" unique_id=205101118 instance=ExtResource("11_efxa6")]
+transform = Transform3D(-0.25881898, 0, -0.96592593, 0, 1, 0, 0.96592593, 0, -0.25881898, 1, 3, 8)
+
+[node name="Roads" type="Node3D" parent="." unique_id=1424513630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40668297, 0, -33.7587)
+
+[node name="Floor1" parent="Roads" unique_id=2131756731 instance=ExtResource("1_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
+
+[node name="Floor2" parent="Roads" unique_id=1619017176 instance=ExtResource("1_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 19)
+
+[node name="Floor3" parent="Roads" unique_id=898374115 instance=ExtResource("1_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -19)
+
+[node name="Roads2" type="Node3D" parent="Roads" unique_id=1906740450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 63)
+
+[node name="Floor1" parent="Roads/Roads2" unique_id=1610914521 instance=ExtResource("1_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
+
+[node name="Floor2" parent="Roads/Roads2" unique_id=1979688067 instance=ExtResource("1_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 19)
+
+[node name="Floor3" parent="Roads/Roads2" unique_id=1132933975 instance=ExtResource("1_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -19)
+
+[node name="Sidewalk" type="Node3D" parent="." unique_id=494199897]
+
+[node name="Environment1" parent="Sidewalk" unique_id=579054595 instance=ExtResource("6_2cqfq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.0196724, -0.3270769, 30.445374)
+
+[node name="Environment2" parent="Sidewalk" unique_id=1392497707 instance=ExtResource("8_2cqfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.797512, 0, -40.379585)
+
+[node name="Vehicles" type="Node3D" parent="." unique_id=1347566837]
+
+[node name="kotse1" parent="Vehicles" unique_id=831943765 instance=ExtResource("3_1bvp3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.93018, 0, -16.899035)
+move_left = false
+
+[node name="kotse2" parent="Vehicles" unique_id=783730654 instance=ExtResource("3_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9301796, 0, 31.530254)
+
+[node name="yellow_ebike" parent="Vehicles" unique_id=191744622 instance=ExtResource("7_dg77c")]
+transform = Transform3D(-0.9952009, 0, 0.09785314, 0, 1, 0, -0.09785314, 0, -0.9952009, -7.461502, 0.12076801, -11.072853)
+
+[node name="bTric" parent="Vehicles" unique_id=1270222012 instance=ExtResource("8_vivmo")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5, 0.89803886, -46.003983)
+
+[node name="gTric" parent="Vehicles" unique_id=1913006020 instance=ExtResource("9_2cqfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.12986565, 10.543952)
+move_left = false
+
+[node name="rTric" parent="Vehicles" unique_id=1090558699 instance=ExtResource("10_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.758114, 0.23483992, 6.09138)
+move_left = false
+
+[node name="rBus" parent="Vehicles" unique_id=596384986 instance=ExtResource("11_2cqfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.667, 41.277653)
+move_left = false
+
+[node name="gJeep" parent="Vehicles" unique_id=1107485911 instance=ExtResource("12_yaehf")]
+transform = Transform3D(-0.99901783, 0, -0.04431033, 0, 1, 0, 0.04431033, 0, -0.99901783, -3.08918, 0, -25.666288)
+
+[node name="rJeep" parent="Vehicles" unique_id=1255572372 instance=ExtResource("13_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -60)
+move_left = false

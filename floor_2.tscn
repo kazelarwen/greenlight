@@ -1,0 +1,60 @@
+[gd_scene format=4 uid="uid://cjqieo6yio5x1"]
+
+[ext_resource type="Texture2D" uid="uid://bna1nlrnbg7s3" path="res://assets/bigasset/lastAssets_Tileable asphalt road surface texture smooth.jpg" id="1_p87uc"]
+[ext_resource type="Texture2D" uid="uid://ceg32jult1db6" path="res://assets/bigasset/lastAssets_NormalMap (3).png" id="2_xyr18"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o2g6v"]
+resource_name = "Material.084"
+cull_mode = 2
+albedo_texture = ExtResource("1_p87uc")
+metallic = 0.46545452
+roughness = 0.80909085
+normal_enabled = true
+normal_scale = 0.9
+normal_texture = ExtResource("2_xyr18")
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eiqmt"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "Material.084",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3uvf5"]
+resource_name = "lastAssets_Cube_022"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("9QD//wn/AAD1AAAACf////UA//8J/wAA9QAAAAn///8J////9QAAAAn/AAD1AP//Cf////UAAAAJ/wAA9QD///UAAAAJ////Cf8AAPUA//8J/wAA9QD///UAAAAJ////"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_o2g6v"),
+"name": "Material.084",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAD//wAAAAAAAP//AAAAAP+//////////7//////AAD/v///AAD///+///8AAP//AIAAAP////8AgP///////wCAAAAAAP//AIAAAAAAAAD/P///AAD///8///8AAAAA/z8AAAAA////P/////8AAP+/AAD//////78AAP//AAD/v/////////+//z//f/8//3//P/9//z//f////3////9/////f////3//fwAA/38AAP9/AAD/fwAA/3////9/////f////3///wAA/38AAP9/AAD/fwAA/3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_eiqmt")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5h11f"]
+size = Vector3(15, 1, 18)
+
+[node name="floor2" type="StaticBody3D" unique_id=2131756731]
+
+[node name="road" type="MeshInstance3D" parent="." unique_id=1565377720]
+transform = Transform3D(7, 0, 0, 0, 0.483, 0, 0, 0, 9.058, 0, -0.25, 0)
+mesh = SubResource("ArrayMesh_3uvf5")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1052095504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, -0.1)
+shape = SubResource("BoxShape3D_5h11f")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://df086akwx1p47"]
+
+[ext_resource type="Script" uid="uid://dfo27bjq6l458" path="res://tao.gd" id="1_icqhq"]
+[ext_resource type="PackedScene" uid="uid://je832lqfhyny" path="res://assets/tao/student.glb" id="2_skc50"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bx8n8"]
+size = Vector3(2, 3, 2)
+
+[node name="tao" type="CharacterBody3D" unique_id=351256526 groups=["player"]]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.52617836, 0, 0)
+script = ExtResource("1_icqhq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1708225261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 1.5, 0.5)
+shape = SubResource("BoxShape3D_bx8n8")
+
+[node name="student" parent="." unique_id=979642549 instance=ExtResource("2_skc50")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.2, -0.7, 0.3)
+
+[editable path="student"]

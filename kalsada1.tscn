@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://g4l8r42s3i8i"]
+
+[ext_resource type="PackedScene" uid="uid://dymgfrjfctwx6" path="res://yellow_floor.tscn" id="1_kxkau"]
+
+[node name="Kalsada" type="Node3D" unique_id=1566441230]
+
+[node name="YellowFloor1" parent="." unique_id=1346930643 instance=ExtResource("1_kxkau")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -19.03, 0, 0)
+
+[node name="YellowFloor2" parent="." unique_id=53335061 instance=ExtResource("1_kxkau")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -19.03, 0, 6.8)
+
+[node name="YellowFloor3" parent="." unique_id=1573118837 instance=ExtResource("1_kxkau")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -19.03, 0, -6.8)
+
+[node name="YellowFloor4" parent="." unique_id=1547856027 instance=ExtResource("1_kxkau")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -19.03, 0, -13.7)
+
+[node name="YellowFloor5" parent="." unique_id=2106815762 instance=ExtResource("1_kxkau")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -19.03, 0, -20.6)
+
+[node name="YellowFloor6" parent="." unique_id=378625272 instance=ExtResource("1_kxkau")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -19.03, 0, -27.5)
+
+[node name="YellowFloor7" parent="." unique_id=1509887709 instance=ExtResource("1_kxkau")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -19.03, 0, 13.582542)
+
+[node name="YellowFloor8" parent="." unique_id=1982622655 instance=ExtResource("1_kxkau")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -19.03, 0, 20.440731)
+
+[node name="YellowFloor9" parent="." unique_id=1367030335 instance=ExtResource("1_kxkau")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -19.03, 0, 27.194277)
