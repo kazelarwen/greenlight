@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d1pmlv5dbmkr4"]
 
 [ext_resource type="Script" uid="uid://cavinbiepqact" path="res://main.gd" id="1_7mycd"]
+[ext_resource type="Script" uid="uid://bm0hqsy8atyi1" path="res://Scenes/cam.gd" id="2_6bp64"]
 [ext_resource type="PackedScene" uid="uid://df086akwx1p47" path="res://Scenes/tao.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://cbmugn4raj3u7" path="res://Scenes/environment_manager.gd" id="4_21xkr"]
 [ext_resource type="PackedScene" uid="uid://3rupdx00utnu" path="res://Scenes/HUD.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dirv5k3ltcsev" path="res://Scenes/environments/environment_1.tscn" id="6_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://b88n80pay38ah" path="res://Scenes/environments/environment_2.tscn" id="8_2cqfq"]
@@ -10,28 +12,31 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
 script = ExtResource("1_7mycd")
 
-[node name="cam&light" type="Camera3D" parent="." unique_id=451922169]
-transform = Transform3D(0.24387515, 0.5850801, -0.773438, -0.04740343, 0.80375594, 0.5930677, 0.96864736, -0.10797087, 0.2237509, -23.97387, 13.471483, 13.300663)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="cam&light" unique_id=967860420]
-transform = Transform3D(0.8905176, -0.09880934, 0.44408923, 0.112086, 0.99369186, -0.0036671609, -0.44092548, 0.05304184, 0.89597505, -0.92024803, 1.3674383, 3.0260315)
-shadow_enabled = true
-
 [node name="HeatTimer" type="Timer" parent="." unique_id=1349217815]
 wait_time = 20.0
 autostart = true
 
 [node name="HUD" parent="." unique_id=847975927 instance=ExtResource("5_lquwl")]
 
+[node name="cam&light" type="Camera3D" parent="." unique_id=451922169]
+transform = Transform3D(-0.090124786, 0.5878719, -0.803918, 0.21168546, 0.80006576, 0.5613236, 0.9731736, -0.11958856, -0.19654968, -23.97387, 11.471483, 10.511387)
+script = ExtResource("2_6bp64")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="cam&light" unique_id=967860420]
+transform = Transform3D(0.8905176, -0.09880934, 0.44408923, 0.112086, 0.99369186, -0.0036671609, -0.44092548, 0.05304184, 0.89597505, -0.92024803, 1.3674383, 3.0260315)
+shadow_enabled = true
+
 [node name="tao" parent="." unique_id=351256526 instance=ExtResource("3_h2yge")]
-transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -18.4, 0.3, 0.171)
+transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -18.4, 0, 6.171)
 
 [node name="EnvironmentManager" type="Node3D" parent="." unique_id=36903151]
+script = ExtResource("4_21xkr")
+environments_node = NodePath("../Environments")
 
 [node name="Environments" type="Node3D" parent="." unique_id=459184919]
 
-[node name="Environment1" parent="Environments" unique_id=1392497707 instance=ExtResource("6_2cqfq")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9, 0, 31)
+[node name="Environment1" parent="Environments" unique_id=1297251226 instance=ExtResource("6_2cqfq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.769756, 0, 40)
 
 [node name="Environment2" parent="Environments" unique_id=150736443 instance=ExtResource("8_2cqfq")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -13.4, 0, 53)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.5, 0, 65)

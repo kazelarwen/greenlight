@@ -22,6 +22,10 @@ func _ready():
 	$Pause.visible = false
 	$Uhaw.visible = false
 
+	# Low health effect starts invisible
+	$LowHealth.visible = true
+	$LowHealth.modulate.a = 0.0
+
 	Global.lives_changed.connect(update_hearts)
 	Global.droplets_changed.connect(update_droplets)
 
@@ -41,6 +45,14 @@ func _ready():
 func update_hearts():
 	$Panel/Hearts.texture = heart_images[Global.lives]
 
+	# Fade low health effect
+	var tween = create_tween()
+
+	if Global.lives <= 1:
+		tween.tween_property($LowHealth, "modulate:a", 0.45, 0.4)
+	else:
+		tween.tween_property($LowHealth, "modulate:a", 0.0, 0.4)
+
 # DROPLETS
 func update_droplets():
 	$Panel/Droplets.texture = droplet_images[Global.droplets]
@@ -57,7 +69,7 @@ func update_coins():
 # DISTANCE
 func update_distance():
 	$Panel3/DistanceLabel.text = str(Global.distance) + " km"
-	
+
 # SCORE
 func update_score():
 	$Panel3/ScoreLabel.text = str(Global.score)
@@ -98,7 +110,7 @@ func _on_menu_button_pressed():
 # GAME OVER
 func game_over():
 	$GameOver.visible = true
-	
+
 	if Global.score >= Global.high_score:
 		$GameOver/GameOverModal/Score/ScoreStatement.text = "NEW PERSONAL BEST"
 	else:
@@ -107,5 +119,5 @@ func game_over():
 	$GameOver/GameOverModal/Score/ScoreLabel.text = str(Global.score)
 	$GameOver/GameOverModal/CoinInfo/CoinLabel.text = str(Global.coins)
 	$GameOver/GameOverModal/DistanceLabel.text = str(Global.distance) + " km"
-	
+
 	get_tree().paused = true

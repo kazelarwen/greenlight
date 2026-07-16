@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dirv5k3ltcsev"]
 
+[ext_resource type="Script" uid="uid://bep6le4hm6r31" path="res://Scenes/environments/collectibles.gd" id="1_j56nx"]
 [ext_resource type="Script" uid="uid://di88bbsniyf5g" path="res://detect.gd" id="3_sc4lb"]
 [ext_resource type="Texture2D" uid="uid://cmqansm4a0xae" path="res://assets/bigasset/assetupdate02 (1)_Screenshot 2026-07-14 184121.png" id="3_vie4y"]
 [ext_resource type="Texture2D" uid="uid://dqt0bfiwnjah3" path="res://assets/bigasset/lastAssets_concTexture_2.png" id="4_axv8m"]
@@ -9,6 +10,17 @@
 [ext_resource type="Texture2D" uid="uid://s7k286cq6ydv" path="res://assets/bigasset/assetupdate02 (1)_Screenshot 2026-07-14 184104.png" id="7_ebayx"]
 [ext_resource type="PackedScene" uid="uid://da8ol3u3i0lek" path="res://Scenes/environments/floor.tscn" id="9_ebayx"]
 [ext_resource type="Texture2D" uid="uid://dniylct3qd1vr" path="res://assets/bigasset/assetupdate02 (1)_Screenshot 2026-07-14 184104_3.png" id="9_xjqet"]
+[ext_resource type="Script" uid="uid://b6s5ycyyugw3p" path="res://spawn_trigger.gd" id="10_sowfx"]
+[ext_resource type="PackedScene" uid="uid://cixuxbyy2r5sg" path="res://Scenes/vehicles/r_tric.tscn" id="12_q3e4a"]
+[ext_resource type="PackedScene" uid="uid://bab68x2r3eesq" path="res://Scenes/vehicles/r_bus.tscn" id="13_blfuj"]
+[ext_resource type="PackedScene" uid="uid://51p87xdpdckd" path="res://Scenes/vehicles/b_tric.tscn" id="14_7s1id"]
+[ext_resource type="PackedScene" uid="uid://ccx1s10nh0wgr" path="res://Scenes/vehicles/yellow_ebike.tscn" id="15_n44mj"]
+[ext_resource type="PackedScene" uid="uid://b4d308jhbdygy" path="res://Scenes/vehicles/r_jeep.tscn" id="16_0nq7h"]
+[ext_resource type="PackedScene" uid="uid://cfkerlrjftfo2" path="res://Scenes/vehicles/g_tric.tscn" id="17_wotmg"]
+[ext_resource type="PackedScene" uid="uid://b707mns175bpu" path="res://Scenes/vehicles/blue_ebike.tscn" id="18_jfi1u"]
+[ext_resource type="PackedScene" uid="uid://c2l74nuu83hp5" path="res://Scenes/vehicles/kotse.tscn" id="19_qjuea"]
+[ext_resource type="PackedScene" uid="uid://pt7iytpjhonf" path="res://Scenes/vehicles/g_jeep.tscn" id="20_8ralx"]
+[ext_resource type="PackedScene" uid="uid://cttu340ur2nq4" path="res://Scenes/vehicles/red_ebike.tscn" id="21_cvlwk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kow8y"]
 size = Vector3(14, 3, 124)
@@ -405,9 +417,17 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wa3gy")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xrsr6"]
-size = Vector3(6, 2.7246094, 112)
+size = Vector3(6, 5.2266846, 112)
 
 [node name="Environment1" type="Node3D" unique_id=1392497707]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3, 0, 40)
+script = ExtResource("1_j56nx")
+
+[node name="StartMarker" type="Marker3D" parent="." unique_id=2051516646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7, 0, 0)
+
+[node name="EndMarker" type="Marker3D" parent="." unique_id=1773778832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 0)
 
 [node name="detect" type="Area3D" parent="." unique_id=2047911910]
 script = ExtResource("3_sc4lb")
@@ -417,6 +437,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2470703, 1, 39.5)
 shape = SubResource("BoxShape3D_kow8y")
 
 [node name="sidewalks" type="Node3D" parent="." unique_id=2092394411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 
 [node name="duplisidewalk" type="Node3D" parent="sidewalks" unique_id=1981684682]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7, 0, 80)
@@ -1387,10 +1408,89 @@ mesh = SubResource("ArrayMesh_k5e16")
 
 [node name="SpawnTrigger" type="Area3D" parent="." unique_id=630732040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1645565, 0, 0)
+script = ExtResource("10_sowfx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnTrigger" unique_id=877208761]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2871094, 0.8623047, 33.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2871094, 2.1133423, 33.5)
 shape = SubResource("BoxShape3D_xrsr6")
+
+[node name="x27" type="CSGBox3D" parent="." unique_id=2005520632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, -0.07714844, 0)
+visible = false
+size = Vector3(27, 0, 1)
+
+[node name="collectibles" type="Node3D" parent="." unique_id=1032000756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+visible = false
+
+[node name="onRoad" type="Marker3D" parent="collectibles" unique_id=660623982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 2, 0)
+
+[node name="onRoad2" type="Marker3D" parent="collectibles" unique_id=1556354679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.000005, 2, 51)
+
+[node name="onRoad3" type="Marker3D" parent="collectibles" unique_id=1999990019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000006, 2, 59)
+
+[node name="onRoad4" type="Marker3D" parent="collectibles" unique_id=167529073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.000003, 2, 25)
+
+[node name="onRoad5" type="Marker3D" parent="collectibles" unique_id=1945786840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.000008, 2, 78)
+
+[node name="onSw" type="Marker3D" parent="collectibles" unique_id=1546833348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.999998, 3, 37)
+
+[node name="onSw2" type="Marker3D" parent="collectibles" unique_id=964043340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9999955, 3, 71)
+
+[node name="onSw3" type="Marker3D" parent="collectibles" unique_id=338716045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.99999905, 3, 5)
+
+[node name="Vehicles" type="Node3D" parent="." unique_id=1225347603]
+
+[node name="rTric" parent="Vehicles" unique_id=1270222012 instance=ExtResource("12_q3e4a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.000002, 0.1, 28)
+move_left = false
+
+[node name="rBus" parent="Vehicles" unique_id=596384986 instance=ExtResource("13_blfuj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8, 0.5, 0)
+
+[node name="bTric" parent="Vehicles" unique_id=1388530417 instance=ExtResource("14_7s1id")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.999998, 0.8, -25)
+move_left = false
+
+[node name="yellow_ebike" parent="Vehicles" unique_id=191744622 instance=ExtResource("15_n44mj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.000001, 0.2, 17)
+
+[node name="rJeep" parent="Vehicles" unique_id=1255572372 instance=ExtResource("16_0nq7h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.000004, -0.7, 56)
+move_left = false
+
+[node name="gTric" parent="Vehicles" unique_id=944092322 instance=ExtResource("17_wotmg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8, 0.3, 48)
+
+[node name="blue_ebike" parent="Vehicles" unique_id=280270655 instance=ExtResource("18_jfi1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.4, 76)
+move_left = false
+
+[node name="kotse" parent="Vehicles" unique_id=783730654 instance=ExtResource("19_qjuea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000009, 0, 91)
+
+[node name="gJeep" parent="Vehicles" unique_id=1107485911 instance=ExtResource("20_8ralx")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.000003, -0.3, 121)
+
+[node name="red_ebike" parent="Vehicles" unique_id=939431355 instance=ExtResource("21_cvlwk")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.9999976, 0.8, -38)
+
+[node name="kotse2" parent="Vehicles" unique_id=1183717795 instance=ExtResource("19_qjuea")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -13.0000105, 0, 102)
+move_left = false
+
+[node name="yellow_ebike2" parent="Vehicles" unique_id=1738654816 instance=ExtResource("15_n44mj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.000002, 0.1, 91)
+move_left = false
 
 [connection signal="body_entered" from="detect" to="detect" method="_on_body_entered"]
 [connection signal="body_exited" from="detect" to="detect" method="_on_body_exited"]
+[connection signal="body_entered" from="SpawnTrigger" to="SpawnTrigger" method="_on_body_entered"]

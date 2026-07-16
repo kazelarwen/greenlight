@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cundnff7vlt1u" path="res://assets/modals/coin.png" id="10_2afx3"]
 [ext_resource type="Texture2D" uid="uid://ct3k4q53n143n" path="res://assets/modals/pause-modal.png" id="11_4x0me"]
 [ext_resource type="Texture2D" uid="uid://cjbfkmj0xfd2" path="res://assets/modals/resume-button.png" id="12_2afx3"]
+[ext_resource type="Texture2D" uid="uid://bhqabn12j0k0a" path="res://assets/modals/vignette.jpg" id="14_xuldq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5h11f"]
 bg_color = Color(0.07450981, 0.07450981, 0.07450981, 0)
@@ -291,6 +292,13 @@ offset_bottom = 379.0
 texture_normal = ExtResource("7_1and6")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="LowHealth" type="TextureRect" parent="." unique_id=1022560572]
+offset_left = -9.0
+offset_top = -22.0
+offset_right = 1171.0
+offset_bottom = 677.0
+texture = ExtResource("14_xuldq")
 
 [connection signal="pressed" from="Panel2/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="GameOver/GameOverModal/MenuButton" to="." method="_on_menu_button_pressed"]

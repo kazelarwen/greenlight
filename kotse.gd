@@ -4,8 +4,8 @@ extends Area3D
 @export var move_left := true   
 # true = right→left, false = left→right
 
-@export var left_limit := -70.0
-@export var right_limit := 70.0
+@export var left_limit := -100.0
+@export var right_limit := 100.0
 
 func _physics_process(delta):
 
