@@ -360,3 +360,5 @@ mesh = SubResource("ArrayMesh_mpem4")
 [node name="Vert_014" type="MeshInstance3D" parent="red_ebike" unique_id=755541941]
 transform = Transform3D(-1.0378131, 0, -4.041393e-07, 0, 1.0378131, 0, 4.041393e-07, 0, -1.0378131, -0.49488103, 0.7664418, 1.1208591)
 mesh = SubResource("ArrayMesh_pncmt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

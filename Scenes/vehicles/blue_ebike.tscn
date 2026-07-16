@@ -360,3 +360,5 @@ mesh = SubResource("ArrayMesh_pejy6")
 [node name="Vert_011" type="MeshInstance3D" parent="Vert_012" unique_id=1766610721]
 transform = Transform3D(-1, -6.3557685e-08, 3.1293257e-07, 6.3557685e-08, 0.9207664, 0.3901143, -3.1293257e-07, 0.3901143, -0.9207665, -0.57570404, -0.93269706, -0.27627036)
 mesh = SubResource("ArrayMesh_muion")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

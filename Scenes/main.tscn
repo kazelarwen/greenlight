@@ -103,6 +103,9 @@ transform = Transform3D(-4.371139e-08, 1, -7.1054274e-14, -1, -4.371139e-08, 1.4
 [node name="watertile(tempo)" parent="Kalsada1" index="11" unique_id=250979582]
 transform = Transform3D(0, 0.4112724, 0, -0.11615071, 0, 0, 0, 7.1054274e-15, 1, -1.5139588, 0.26032785, -15.552179)
 
+[node name="rubbergarb(unifnished)" parent="Kalsada1" index="12" unique_id=610840506]
+transform = Transform3D(0.257859, 0, 0, 0, 0.16732815, 0, 0, 0, 0.257859, -2.556332, 0.6823356, -0.18526167)
+
 [node name="roadtile" parent="Kalsada1" index="13" unique_id=51563198]
 transform = Transform3D(2.646978e-23, 4.9931742e-08, 0.580437, -0.042678848, 4.9931735e-08, -2.0621265e-15, -2.5438576e-09, -0.8377155, 3.4596745e-08, -1.7379673, 0.18336281, -19.509094)
 
