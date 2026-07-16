@@ -1,9 +1,21 @@
 [gd_scene format=4 uid="uid://b88n80pay38ah"]
 
+[ext_resource type="Script" uid="uid://bep6le4hm6r31" path="res://Scenes/environments/collectibles.gd" id="1_e7i8s"]
 [ext_resource type="Script" uid="uid://di88bbsniyf5g" path="res://detect.gd" id="1_x0881"]
 [ext_resource type="Texture2D" uid="uid://dqt0bfiwnjah3" path="res://assets/bigasset/lastAssets_concTexture_2.png" id="2_baub7"]
 [ext_resource type="Texture2D" uid="uid://ckudf4kmwmaxi" path="res://assets/bigasset/lastAssets_NormalMap (4).png" id="3_0cs4w"]
 [ext_resource type="PackedScene" uid="uid://cjqieo6yio5x1" path="res://Scenes/floors/floor_2.tscn" id="4_af8el"]
+[ext_resource type="Script" uid="uid://b6s5ycyyugw3p" path="res://spawn_trigger.gd" id="5_dnnsm"]
+[ext_resource type="PackedScene" uid="uid://c2l74nuu83hp5" path="res://Scenes/vehicles/kotse.tscn" id="7_1ethv"]
+[ext_resource type="PackedScene" uid="uid://b4d308jhbdygy" path="res://Scenes/vehicles/r_jeep.tscn" id="8_qlrgt"]
+[ext_resource type="PackedScene" uid="uid://b707mns175bpu" path="res://Scenes/vehicles/blue_ebike.tscn" id="9_5i4ae"]
+[ext_resource type="PackedScene" uid="uid://cttu340ur2nq4" path="res://Scenes/vehicles/red_ebike.tscn" id="10_s4yfk"]
+[ext_resource type="PackedScene" uid="uid://pt7iytpjhonf" path="res://Scenes/vehicles/g_jeep.tscn" id="11_xd0o4"]
+[ext_resource type="PackedScene" uid="uid://cfkerlrjftfo2" path="res://Scenes/vehicles/g_tric.tscn" id="12_41g0b"]
+[ext_resource type="PackedScene" uid="uid://51p87xdpdckd" path="res://Scenes/vehicles/b_tric.tscn" id="13_8egeu"]
+[ext_resource type="PackedScene" uid="uid://ccx1s10nh0wgr" path="res://Scenes/vehicles/yellow_ebike.tscn" id="14_lox5r"]
+[ext_resource type="PackedScene" uid="uid://bab68x2r3eesq" path="res://Scenes/vehicles/r_bus.tscn" id="15_vwvvu"]
+[ext_resource type="PackedScene" uid="uid://cixuxbyy2r5sg" path="res://Scenes/vehicles/r_tric.tscn" id="16_4vsd5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nrxsr"]
 size = Vector3(6, 3, 124)
@@ -19,7 +31,7 @@ normal_scale = 2.0
 normal_texture = ExtResource("3_0cs4w")
 metadata/_gltf_primary_texture_coord = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_rong4"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_dnnsm"]
 _surfaces = [{
 "aabb": AABB(-1, -1, -1, 2, 2, 2),
 "format": 34896613377,
@@ -49,12 +61,23 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAD//wAAAAAAAP//AAAAAP+//////////7//////AAD/v///AAD///+///8AAP//AIAAAP////8AgP///////wCAAAAAAP//AIAAAAAAAAD/P///AAD///8///8AAAAA/z8AAAAA////P/////8AAP+/AAD//////78AAP//AAD/v/////////+//z//f/8//3//P/9//z//f////3////9/////f////3//fwAA/38AAP9/AAD/fwAA/3////9/////f////3///wAA/38AAP9/AAD/fwAA/3////9/////f////3////9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_rong4")
+shadow_mesh = SubResource("ArrayMesh_dnnsm")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u2aku"]
 size = Vector3(7, 0.001, 11)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_e7i8s"]
+size = Vector3(6, 2.7246094, 112)
+
 [node name="Environment2" type="Node3D" unique_id=150736443]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 65)
+script = ExtResource("1_e7i8s")
+
+[node name="StartMarker" type="Marker3D" parent="." unique_id=1748615009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3, 0, 0)
+
+[node name="EndMarker" type="Marker3D" parent="." unique_id=1644108100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6, 0, 0)
 
 [node name="detect" type="Area3D" parent="." unique_id=1018876572]
 script = ExtResource("1_x0881")
@@ -64,7 +87,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9234009, 1, 39.5)
 shape = SubResource("BoxShape3D_nrxsr")
 
 [node name="sidewalk" type="Node3D" parent="." unique_id=1564474574]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.4, 25)
 
 [node name="duplisidewalk" type="Node3D" parent="sidewalk" unique_id=2070863912]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7, 0, 80)
@@ -440,5 +463,99 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.59331703, 0, -22.728935)
 [node name="floor4" parent="Roads/BrokenRoad2" unique_id=1093280755 instance=ExtResource("4_af8el")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.59331703, 0, 13.271065)
 
+[node name="x32" type="CSGBox3D" parent="." unique_id=39113727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6, -0.22924805, 8)
+size = Vector3(32, 0, 1)
+
+[node name="SpawnTrigger" type="Area3D" parent="." unique_id=801985343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1645565, 0, 0)
+script = ExtResource("5_dnnsm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnTrigger" unique_id=1491849018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2871094, 0.8623047, 33.5)
+shape = SubResource("BoxShape3D_e7i8s")
+
+[node name="collectibles" type="Node3D" parent="." unique_id=860697049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="onRoad" type="Marker3D" parent="collectibles" unique_id=2070787025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.000002, 2, 23)
+
+[node name="onRoad2" type="Marker3D" parent="collectibles" unique_id=1187693664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.000006, 2, 63)
+
+[node name="onRoad3" type="Marker3D" parent="collectibles" unique_id=1922791196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000001, 2, 4)
+
+[node name="onRoad4" type="Marker3D" parent="collectibles" unique_id=361103949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.000008, 2, 83)
+
+[node name="onRoad5" type="Marker3D" parent="collectibles" unique_id=919201732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0000043, 2, 38)
+
+[node name="onSw" type="Marker3D" parent="collectibles" unique_id=50901396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9999957, 3, 64)
+
+[node name="onSw2" type="Marker3D" parent="collectibles" unique_id=1388473279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.999993, 3, 97)
+
+[node name="Vehicles" type="Node3D" parent="." unique_id=500025384]
+
+[node name="kotse" parent="Vehicles" unique_id=783730654 instance=ExtResource("7_1ethv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.000004, 0, 43)
+
+[node name="kotse2" parent="Vehicles" unique_id=1833566474 instance=ExtResource("7_1ethv")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -21.00001, 0, 100)
+move_left = false
+
+[node name="rJeep" parent="Vehicles" unique_id=1255572372 instance=ExtResource("8_qlrgt")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -15, -0.6, 0)
+
+[node name="blue_ebike" parent="Vehicles" unique_id=280270655 instance=ExtResource("9_5i4ae")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.000001, 0.5, 21)
+move_left = false
+
+[node name="red_ebike" parent="Vehicles" unique_id=939431355 instance=ExtResource("10_s4yfk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.8, 55)
+move_left = false
+
+[node name="red_ebike2" parent="Vehicles" unique_id=1850944846 instance=ExtResource("10_s4yfk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000005, 0.8, 122)
+move_left = false
+
+[node name="gJeep" parent="Vehicles" unique_id=1107485911 instance=ExtResource("11_xd0o4")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14, -0.3, 48)
+
+[node name="gJeep2" parent="Vehicles" unique_id=1960644068 instance=ExtResource("11_xd0o4")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.0000085, -0.3, 140)
+
+[node name="gTric" parent="Vehicles" unique_id=1270222012 instance=ExtResource("12_41g0b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.000001, 0.3, 71)
+move_left = false
+
+[node name="gTric2" parent="Vehicles" unique_id=251690191 instance=ExtResource("12_41g0b")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.999993, 0.3, -17)
+
+[node name="bTric" parent="Vehicles" unique_id=1921006753 instance=ExtResource("13_8egeu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 1, 95)
+
+[node name="yellow_ebike" parent="Vehicles" unique_id=191744622 instance=ExtResource("14_lox5r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -16.000002, 0.3, 128)
+
+[node name="rBus" parent="Vehicles" unique_id=596384986 instance=ExtResource("15_vwvvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0.5, 27)
+move_left = false
+
+[node name="rBus2" parent="Vehicles" unique_id=1907816569 instance=ExtResource("15_vwvvu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3, 0.5, 21)
+
+[node name="rTric" parent="Vehicles" unique_id=1034383869 instance=ExtResource("16_4vsd5")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -16.000004, 0.5, 111)
+
+[node name="rTric2" parent="Vehicles" unique_id=1108844577 instance=ExtResource("16_4vsd5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.5, 61)
+move_left = false
+
 [connection signal="body_entered" from="detect" to="detect" method="_on_body_entered"]
 [connection signal="body_exited" from="detect" to="detect" method="_on_body_exited"]
+[connection signal="body_entered" from="SpawnTrigger" to="SpawnTrigger" method="_on_body_entered"]

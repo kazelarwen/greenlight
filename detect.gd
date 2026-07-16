@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var sidewalk_height := 0.48
+@export var sidewalk_height := 0.5
 
 var counted := false
 

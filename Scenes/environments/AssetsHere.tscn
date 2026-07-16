@@ -32,7 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://d04ymdpukmmgl" path="res://Scenes/collectibles/coin.tscn" id="30_744of"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jx8tp"]
-size = Vector3(5.4658203, 2.7246094, 112)
+size = Vector3(6, 2.7246094, 112)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_olkow"]
 resource_name = "Material.094"
@@ -1702,7 +1702,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6, 
 move_left = false
 
 [node name="gTric" parent="Vehicles" unique_id=2001697392 instance=ExtResource("22_ir0xr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0.3, 23)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0.3, 25)
 
 [node name="rTric" parent="Vehicles" unique_id=101817135 instance=ExtResource("23_v2kj2")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -21, 0.4, -12)
@@ -1734,6 +1734,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2, 37)
 
 [node name="coin" parent="Coins" unique_id=1633129997 instance=ExtResource("30_744of")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 2, 34)
+
+[node name="SpawnTrigger" type="Area3D" parent="." unique_id=1180405200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnTrigger" unique_id=500162639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2871094, 0.8623047, 33.5)
+shape = SubResource("BoxShape3D_jx8tp")
 
 [connection signal="body_entered" from="detect" to="detect" method="_on_body_entered"]
 [connection signal="body_exited" from="detect" to="detect" method="_on_body_exited"]
