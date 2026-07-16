@@ -83,6 +83,7 @@ func toggle_pause():
 	get_tree().paused = $Pause.visible
 
 func _on_pause_button_pressed():
+	NodeGlobal.play_click()
 	print("PAUSE BUTTON CLICKED")
 	toggle_pause()
 
@@ -92,17 +93,20 @@ func _unhandled_input(event):
 
 # RESUME
 func _on_resume_button_pressed():
+	NodeGlobal.play_click()
 	$Pause.visible = false
 	get_tree().paused = false
 
 # RESTART
 func _on_restart_button_pressed():
+	NodeGlobal.play_click()
 	get_tree().paused = false
 	Global.reset_game()
 	get_tree().reload_current_scene()
 
 # MENU
 func _on_menu_button_pressed():
+	NodeGlobal.play_click()
 	get_tree().paused = false
 	Global.reset_game()
 	get_tree().change_scene_to_file("res://Scenes/home.tscn")
