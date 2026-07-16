@@ -92,9 +92,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gq34i")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_lo7sd"]
-size = Vector3(1.9741516, 2.0285645, 47.005676)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7a58p"]
 resource_name = "Material.047"
 cull_mode = 2
@@ -359,10 +356,10 @@ shadow_mesh = SubResource("ArrayMesh_hv6a7")
 [node name="Environment4" type="Node2D" unique_id=2005064971]
 
 [node name="Node3D" type="Node3D" parent="." unique_id=2080337435]
-transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, 0, 0, 0)
+transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, 18.305695, 0, 0)
 
 [node name="road" type="Node3D" parent="Node3D" unique_id=475246475]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.777706, 0, 10.4040985)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.777706, 0, -10.653212)
 
 [node name="Floor3" parent="Node3D/road" unique_id=2131756731 instance=ExtResource("1_5ikd7")]
 transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 0, 0, 0)
@@ -397,112 +394,108 @@ transform = Transform3D(-4.371137e-08, 0, -0.99999964, 0, 1, 0, 0.99999964, 0, -
 transform = Transform3D(1, 0, -1.6768809e-12, 0, 1, 0, 1.6768809e-12, 0, 1, 0.52578735, -0.07067871, -0.016597748)
 shape = SubResource("BoxShape3D_skteu")
 
-[node name="siidewalkings" type="Node3D" parent="Node3D" unique_id=1155785167]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.777706, 0, 10.4040985)
+[node name="Node3D" type="Node3D" parent="Node3D" unique_id=1021472395]
+transform = Transform3D(-6.985306e-13, -5.2234947e-05, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, -3.953613e-05, -0.2612343, -0.037988186, 0.123189926)
 
-[node name="sidewalk2" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=290386494]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, -4, 0, 10.831)
+[node name="sidewalk2" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=290386494]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011076778, -7.909847)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk3" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=808012486]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, -8, 0, 10.831)
+[node name="sidewalk3" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=808012486]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.000110629946, -9.777261)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk4" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1490750510]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, -12, 0, 10.831)
+[node name="sidewalk4" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1490750510]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.000110495836, -11.644673)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk5" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=906060617]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, -16, 0, 10.831)
+[node name="sidewalk5" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=906060617]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.000110361725, -13.512087)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk6" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=882560151]
-transform = Transform3D(-0.074596405, 2.4314423e-07, 2.118027, -0.49440405, 1.7939142e-07, -0.319571, -3.7748954e-08, -2.8300002, 1.6171651e-07, -20, 0, 10.831)
+[node name="sidewalk6" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=882560151]
+transform = Transform3D(0.98880804, 6.8535286e-08, 0.6391419, -1.8407604e-09, 1, -9.165888e-09, -0.034825586, 1.3764293e-08, 0.9888081, 0, 0.000110227615, -15.379502)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk7" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=272828217]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, -24, 0, 10.831)
+[node name="sidewalk7" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=272828217]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.000110093504, -17.246914)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk8" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1727754181]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, -28, 0, 10.831)
+[node name="sidewalk8" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1727754181]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011029467, -19.114328)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk9" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1320060365]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, -32, 0, 10.831)
+[node name="sidewalk9" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1320060365]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011016056, -20.98174)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk10" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1766642117]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, -36, 0, 10.831)
+[node name="sidewalk10" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1766642117]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011002645, -22.849155)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk11" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1088636675]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 4, 0, 10.831)
+[node name="sidewalk11" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1088636675]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.000111036, -4.175019)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk12" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=608663322]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 8, 0, 10.831)
+[node name="sidewalk12" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=608663322]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011117011, -2.3076055)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk13" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=2015367073]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 12, 0, 10.831)
+[node name="sidewalk13" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=2015367073]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011130422, -0.44019243)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk14" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1714437512]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 16, 0, 10.831)
+[node name="sidewalk14" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1714437512]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.000111438334, 1.427221)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk15" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1903868001]
-transform = Transform3D(0.027595183, 2.015415e-07, 2.1387353, -0.49923792, 2.2512535e-07, 0.11821776, -3.7748954e-08, -2.8300002, 1.6171651e-07, 20, 0, 10.831)
+[node name="sidewalk15" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1903868001]
+transform = Transform3D(0.9984758, -2.2932568e-08, -0.2364355, 7.5650064e-10, 1, 3.0668161e-09, 0.012882904, -5.658876e-09, 0.9984758, 0, 0.00011157617, 3.2946348)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk16" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1152610841]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 24, 0, 10.831)
+[node name="sidewalk16" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1152610841]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011171028, 5.162048)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk17" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1200896951]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 28, 0, 10.831)
+[node name="sidewalk17" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1200896951]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.000111509115, 7.0294614)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk18" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=708238798]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 32, 0, 10.831)
+[node name="sidewalk18" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=708238798]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.000111643225, 8.896875)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk19" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1342178736]
-transform = Transform3D(9.04983e-16, 2.1365905e-07, 2.142, -0.49660423, 0.3292651, -1.8815403e-08, -0.058174044, -2.81078, 1.6061823e-07, 36, 0, 10.831)
+[node name="sidewalk19" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1342178736]
+transform = Transform3D(0.9932084, -0.6585297, 3.7630784e-08, 0.020556184, 0.9932084, 3.8744474e-10, -2.0504558e-09, 6.7666406e-10, 0.99999994, 0, 0.000111777335, 10.764289)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk20" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=37399996]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 40, 0, 10.831)
+[node name="sidewalk20" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=37399996]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011191517, 12.631702)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk21" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1865513087]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 44, 0, 10.831)
+[node name="sidewalk21" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1865513087]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.000112045556, 14.499117)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk22" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=608897808]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 48, 0, 10.831)
+[node name="sidewalk22" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=608897808]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011217967, 16.366528)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk23" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=146168771]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 52, 0, 10.831)
+[node name="sidewalk23" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=146168771]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.0001123175, 18.233942)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk24" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1246956376]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 56, 0, 10.831)
+[node name="sidewalk24" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1246956376]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011245161, 20.101357)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk25" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=901450510]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 60, 0, 10.831)
+[node name="sidewalk25" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=901450510]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00011258572, 21.96877)
 mesh = SubResource("ArrayMesh_er2qc")
 
-[node name="sidewalk" type="MeshInstance3D" parent="Node3D/siidewalkings" unique_id=1573430398]
-transform = Transform3D(1.0736101e-15, 2.1365905e-07, 2.142, -0.5, 2.1365905e-07, -7.609911e-15, -3.774895e-08, -2.83, 1.617165e-07, 0, 0, 10.83)
+[node name="sidewalk" type="MeshInstance3D" parent="Node3D/Node3D" unique_id=1573430398]
+transform = Transform3D(0.99999994, 1.4664202e-16, 8.6736174e-19, -8.8360095e-16, 0.9999999, -9.094947e-13, -2.7105054e-20, 0, 0.99999994, 0, 0.00046440214, -6.042433)
 mesh = SubResource("ArrayMesh_3ooat")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/siidewalkings" unique_id=972430698]
-transform = Transform3D(1.0736102e-15, 2.1365905e-07, 2.142, -0.5, 2.1365908e-07, -7.609911e-15, -3.7748954e-08, -2.8300002, 1.617165e-07, 12.211885, -0.06241606, 10.654471)
-shape = SubResource("BoxShape3D_lo7sd")
 
 [node name="plant" type="Node3D" parent="Node3D" unique_id=659275250]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -44.767715, 0, -0.09139919)
