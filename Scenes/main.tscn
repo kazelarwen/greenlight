@@ -1,68 +1,20 @@
-[gd_scene format=4 uid="uid://d1pmlv5dbmkr4"]
+[gd_scene format=3 uid="uid://d1pmlv5dbmkr4"]
 
-[ext_resource type="PackedScene" uid="uid://da8ol3u3i0lek" path="res://Scenes/environments/floor.tscn" id="1_1bvp3"]
 [ext_resource type="Script" uid="uid://cavinbiepqact" path="res://main.gd" id="1_7mycd"]
-[ext_resource type="PackedScene" uid="uid://c2l74nuu83hp5" path="res://Scenes/vehicles/kotse.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://df086akwx1p47" path="res://Scenes/tao.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://3rupdx00utnu" path="res://Scenes/HUD.tscn" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://cb1mso1oaapuj" path="res://assets/floor/modularassetglb.glb" id="7_272bh"]
-[ext_resource type="Texture2D" uid="uid://ch6dsomf1b7op" path="res://assets/floor/modularassetglb_5D35DF60-B52E-4ABC-9C5A-3DD31C7FF44E.png" id="8_kek77"]
-[ext_resource type="Texture2D" uid="uid://d04q7qp3cdp43" path="res://assets/floor/modularassetglb_NormalMap.png" id="9_4c57u"]
-[ext_resource type="PackedScene" uid="uid://ckgvcjvqd5gik" path="res://Scenes/collectibles/tubig.tscn" id="10_4c57u"]
-[ext_resource type="PackedScene" uid="uid://d04ymdpukmmgl" path="res://Scenes/collectibles/coin.tscn" id="11_efxa6"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jgyi3"]
-resource_name = "Material.001"
-cull_mode = 2
-albedo_texture = ExtResource("8_kek77")
-metallic = 0.19272727
-roughness = 0.7018182
-normal_enabled = true
-normal_scale = 4.3
-normal_texture = ExtResource("9_4c57u")
-metadata/_gltf_primary_texture_coord = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_bq86u"]
-_surfaces = [{
-"aabb": AABB(-0.19999999, -0.72970754, -1, 0.39999998, 1.4594151, 2),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
-"name": "Material.001",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_sjhqg"]
-resource_name = "modularassetglb_Cube_002"
-_surfaces = [{
-"aabb": AABB(-0.19999999, -0.72970754, -1, 0.39999998, 1.4594151, 2),
-"attribute_data": PackedByteArray("JV9B6v//4nQlX+J0//9B6nyfQeqnv+J0fJ/idKe/Qer//0HqJV/idP//4nQlX0Hqp79B6nyf4nSnv+J0fJ9B6nyfJV+nv///p78lX3yf//8lX3xm//+ohiVfqIb//3xm"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_jgyi3"),
-"name": "Material.001",
-"primitive": 3,
-"uv_scale": Vector4(2.6905665, 2.6905665, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAP////8AAAAAAAD//wAAAAD//wAAAAAAAP//AAAAAP+//////////7//////AAD/v///AAD///+///8AAP//AIAAAP////8AgP///////wCAAAAAAP//AIAAAAAAAAD/P///AAD///8///8AAAAA/z8AAAAA////P/////8AAFTVAAD/////VNUAAP//AABU1f///////1TV/z//f/8//3//P/9//z//f////3////9/////f////3//fwAA/38AAP9/AAD/fwAA/3////9/////f////3///wAA/38AAP9/AAD/fwAA/3+pqqqqqqqqqqmqqqqqqqqq")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_bq86u")
+[ext_resource type="PackedScene" uid="uid://dirv5k3ltcsev" path="res://Scenes/environments/environment_1.tscn" id="6_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://b88n80pay38ah" path="res://Scenes/environments/environment_2.tscn" id="8_2cqfq"]
 
 [node name="main" type="Node3D" unique_id=1337213791]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
 script = ExtResource("1_7mycd")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=451922169]
+[node name="cam&light" type="Camera3D" parent="." unique_id=451922169]
 transform = Transform3D(0.24387515, 0.5850801, -0.773438, -0.04740343, 0.80375594, 0.5930677, 0.96864736, -0.10797087, 0.2237509, -23.97387, 13.471483, 13.300663)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=967860420]
-transform = Transform3D(0.6237829, 0.5162676, -0.5868243, -0.2136225, 0.83482695, 0.50737506, 0.751838, -0.19113302, 0.63103706, -25.738682, 16.408834, 12.938701)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="cam&light" unique_id=967860420]
+transform = Transform3D(0.8905176, -0.09880934, 0.44408923, 0.112086, 0.99369186, -0.0036671609, -0.44092548, 0.05304184, 0.89597505, -0.92024803, 1.3674383, 3.0260315)
 shadow_enabled = true
 
 [node name="HeatTimer" type="Timer" parent="." unique_id=1349217815]
@@ -72,76 +24,14 @@ autostart = true
 [node name="HUD" parent="." unique_id=847975927 instance=ExtResource("5_lquwl")]
 
 [node name="tao" parent="." unique_id=351256526 instance=ExtResource("3_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.528748, -0.13680363, 0.17104435)
+transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -18.4, 0.3, 0.171)
 
-[node name="Roads" type="Node3D" parent="." unique_id=1538325788]
+[node name="EnvironmentManager" type="Node3D" parent="." unique_id=36903151]
 
-[node name="Floor1" parent="Roads" unique_id=2131756731 instance=ExtResource("1_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
+[node name="Environments" type="Node3D" parent="." unique_id=459184919]
 
-[node name="Floor2" parent="Roads" unique_id=217489719 instance=ExtResource("1_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 19)
+[node name="Environment1" parent="Environments" unique_id=1392497707 instance=ExtResource("6_2cqfq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9, 0, 31)
 
-[node name="Floor3" parent="Roads" unique_id=1026376969 instance=ExtResource("1_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -19)
-
-[node name="Vehicles" type="Node3D" parent="." unique_id=1347566837]
-
-[node name="kotse1" parent="Vehicles" unique_id=831943765 instance=ExtResource("3_1bvp3")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.93018, 0, -10.469746)
-move_left = false
-
-[node name="kotse2" parent="Vehicles" unique_id=783730654 instance=ExtResource("3_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9301796, 0, 31.530254)
-
-[node name="Kalsada1" parent="." unique_id=616405137 instance=ExtResource("7_272bh")]
-transform = Transform3D(-7, 0, -1.0569706e-06, 0, 7, 0, 1.0569706e-06, 0, -7, -16, -2, -5)
-
-[node name="rocktile" parent="Kalsada1" index="0" unique_id=2102336064]
-transform = Transform3D(-4.371139e-08, 1, -7.1054274e-14, -1, -4.371139e-08, 1.4118152e-21, -1.6940659e-21, 7.1054274e-14, 1, -2.9031432, 0.24285716, 2.856001)
-
-[node name="watertile(tempo)" parent="Kalsada1" index="11" unique_id=250979582]
-transform = Transform3D(0, 0.4112724, 0, -0.11615071, 0, 0, 0, 7.1054274e-15, 1, -1.5139588, 0.26032785, -15.552179)
-
-[node name="rubbergarb(unifnished)" parent="Kalsada1" index="12" unique_id=610840506]
-transform = Transform3D(0.257859, 0, 0, 0, 0.16732815, 0, 0, 0, 0.257859, -2.556332, 0.6823356, -0.18526167)
-
-[node name="roadtile" parent="Kalsada1" index="13" unique_id=51563198]
-transform = Transform3D(2.646978e-23, 4.9931742e-08, 0.580437, -0.042678848, 4.9931735e-08, -2.0621265e-15, -2.5438576e-09, -0.8377155, 3.4596745e-08, -1.7379673, 0.18336281, -19.509094)
-
-[node name="rocktile2" type="MeshInstance3D" parent="Kalsada1" unique_id=1355693386]
-transform = Transform3D(-4.371139e-08, 1, -7.1054274e-14, -1, -4.371139e-08, 1.4118152e-21, -1.6940659e-21, 7.1054274e-14, 1, -2.9031432, 0.24285716, 0.99885833)
-mesh = SubResource("ArrayMesh_sjhqg")
-
-[node name="rocktile3" type="MeshInstance3D" parent="Kalsada1" unique_id=216237922]
-transform = Transform3D(-4.371139e-08, 1, -7.1054274e-14, -1, -4.371139e-08, 1.4118152e-21, -1.6940659e-21, 7.1054274e-14, 1, -2.9031432, 0.24285716, -0.7154276)
-mesh = SubResource("ArrayMesh_sjhqg")
-
-[node name="rocktile4" type="MeshInstance3D" parent="Kalsada1" unique_id=1897552954]
-transform = Transform3D(-4.371139e-08, 1, -7.1054274e-14, -1, -4.371139e-08, 1.4118152e-21, -1.6940659e-21, 7.1054274e-14, 1, -2.903143, 0.24285716, -2.7154274)
-mesh = SubResource("ArrayMesh_sjhqg")
-
-[node name="rocktile5" type="MeshInstance3D" parent="Kalsada1" unique_id=1064523439]
-transform = Transform3D(-4.371139e-08, 1, -7.1054274e-14, -1, -4.371139e-08, 1.4118152e-21, -1.6940659e-21, 7.1054274e-14, 1, -2.903143, 0.24285716, -4.715429)
-mesh = SubResource("ArrayMesh_sjhqg")
-
-[node name="Waters" type="Node3D" parent="." unique_id=89448879]
-
-[node name="tubig1" parent="Waters" unique_id=1065633301 instance=ExtResource("10_4c57u")]
-transform = Transform3D(0.49999997, 0, 0.86602545, 0.42269138, 0.8727978, -0.24404095, -0.7558651, 0.48808193, 0.43639886, -6, 2.0944052, 12)
-
-[node name="tubig2" parent="Waters" unique_id=2025389789 instance=ExtResource("10_4c57u")]
-transform = Transform3D(0.49999997, 0, 0.86602545, 0.42269138, 0.8727978, -0.24404095, -0.7558651, 0.48808193, 0.43639886, -6, 2.0944052, -13)
-
-[node name="tubig3" parent="Waters" unique_id=446446610 instance=ExtResource("10_4c57u")]
-transform = Transform3D(0.49999997, 0, 0.86602545, 0.42269138, 0.8727978, -0.24404095, -0.7558651, 0.48808193, 0.43639886, -11, 2.0944052, 23)
-
-[node name="Coins" type="Node3D" parent="." unique_id=133416571]
-
-[node name="coin1" parent="Coins" unique_id=1633129997 instance=ExtResource("11_efxa6")]
-transform = Transform3D(-0.25881898, 0, -0.96592593, 0, 1, 0, 0.96592593, 0, -0.25881898, -13, 2, 3)
-
-[node name="coin2" parent="Coins" unique_id=205101118 instance=ExtResource("11_efxa6")]
-transform = Transform3D(-0.25881898, 0, -0.96592593, 0, 1, 0, 0.96592593, 0, -0.25881898, 1, 3, 8)
-
-[editable path="Kalsada1"]
+[node name="Environment2" parent="Environments" unique_id=150736443 instance=ExtResource("8_2cqfq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -13.4, 0, 53)

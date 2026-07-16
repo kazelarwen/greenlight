@@ -404,6 +404,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wa3gy")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrsr6"]
+size = Vector3(6, 2.7246094, 112)
+
 [node name="Environment1" type="Node3D" unique_id=1392497707]
 
 [node name="detect" type="Area3D" parent="." unique_id=2047911910]
@@ -1381,6 +1384,13 @@ shape = SubResource("CapsuleShape3D_jb611")
 [node name="streetlight" type="MeshInstance3D" parent="things/streetlight2" unique_id=491360843]
 transform = Transform3D(0.3, 0, 0, 0, -6.989, 4.5298744e-08, 0, -1.0553097e-06, -0.3, -0.8897047, 7.4077263, -0.57066536)
 mesh = SubResource("ArrayMesh_k5e16")
+
+[node name="SpawnTrigger" type="Area3D" parent="." unique_id=630732040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1645565, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnTrigger" unique_id=877208761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2871094, 0.8623047, 33.5)
+shape = SubResource("BoxShape3D_xrsr6")
 
 [connection signal="body_entered" from="detect" to="detect" method="_on_body_entered"]
 [connection signal="body_exited" from="detect" to="detect" method="_on_body_exited"]
