@@ -469,6 +469,7 @@ size = Vector3(32, 0, 1)
 
 [node name="SpawnTrigger" type="Area3D" parent="." unique_id=801985343]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1645565, 0, 0)
+visible = false
 script = ExtResource("5_dnnsm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnTrigger" unique_id=1491849018]

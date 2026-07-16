@@ -1408,6 +1408,7 @@ mesh = SubResource("ArrayMesh_k5e16")
 
 [node name="SpawnTrigger" type="Area3D" parent="." unique_id=630732040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1645565, 0, 0)
+visible = false
 script = ExtResource("10_sowfx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnTrigger" unique_id=877208761]
@@ -1421,7 +1422,6 @@ size = Vector3(27, 0, 1)
 
 [node name="collectibles" type="Node3D" parent="." unique_id=1032000756]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-visible = false
 
 [node name="onRoad" type="Marker3D" parent="collectibles" unique_id=660623982]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 2, 0)

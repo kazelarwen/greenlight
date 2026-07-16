@@ -1,12 +1,10 @@
 extends CharacterBody3D
 
 var invincible := false
-@export var max_camera_distance := 8.0
 @export var speed := 5.0
 
 @onready var anim = $student/AnimationPlayer
 @onready var model = $student
-@onready var camera = $"../cam&light"
 
 func _ready():
 	anim.play("stand")
@@ -34,9 +32,6 @@ func _physics_process(_delta):
 	else:
 		if anim.current_animation != "stand":
 			anim.play("stand")
-
-	if camera.global_position.x - global_position.x > max_camera_distance:
-		Global.game_over.emit()
 
 	move_and_slide()
 

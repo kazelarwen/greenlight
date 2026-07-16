@@ -22,10 +22,6 @@ func _ready():
 	$Pause.visible = false
 	$Uhaw.visible = false
 
-	# Low health effect starts invisible
-	$LowHealth.visible = true
-	$LowHealth.modulate.a = 0.0
-
 	Global.lives_changed.connect(update_hearts)
 	Global.droplets_changed.connect(update_droplets)
 
@@ -44,14 +40,6 @@ func _ready():
 # HEARTS
 func update_hearts():
 	$Panel/Hearts.texture = heart_images[Global.lives]
-
-	# Fade low health effect
-	var tween = create_tween()
-
-	if Global.lives <= 1:
-		tween.tween_property($LowHealth, "modulate:a", 0.45, 0.4)
-	else:
-		tween.tween_property($LowHealth, "modulate:a", 0.0, 0.4)
 
 # DROPLETS
 func update_droplets():
@@ -83,7 +71,6 @@ func toggle_pause():
 	get_tree().paused = $Pause.visible
 
 func _on_pause_button_pressed():
-	NodeGlobal.play_click()
 	print("PAUSE BUTTON CLICKED")
 	toggle_pause()
 
@@ -93,20 +80,18 @@ func _unhandled_input(event):
 
 # RESUME
 func _on_resume_button_pressed():
-	NodeGlobal.play_click()
+
 	$Pause.visible = false
 	get_tree().paused = false
 
 # RESTART
 func _on_restart_button_pressed():
-	NodeGlobal.play_click()
 	get_tree().paused = false
 	Global.reset_game()
 	get_tree().reload_current_scene()
 
 # MENU
 func _on_menu_button_pressed():
-	NodeGlobal.play_click()
 	get_tree().paused = false
 	Global.reset_game()
 	get_tree().change_scene_to_file("res://Scenes/home.tscn")

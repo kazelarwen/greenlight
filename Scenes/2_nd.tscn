@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b52hyx0t3q05h"]
+
+[ext_resource type="PackedScene" uid="uid://cadh7gfkrgvu" path="res://Scenes/environment_4.tscn" id="1_x8ksa"]
+[ext_resource type="PackedScene" uid="uid://bfoy6npsolsuk" path="res://Scenes/environments/environment_3.tscn" id="2_naqjy"]
+[ext_resource type="Script" uid="uid://b6s5ycyyugw3p" path="res://spawn_trigger.gd" id="3_naqjy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eruna"]
+size = Vector3(6, 2.7246094, 167.12842)
+
+[node name="2nd" type="Node3D" unique_id=829021067]
+
+[node name="Environment4" parent="." unique_id=823885579 instance=ExtResource("1_x8ksa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.663803, 0, 0.044044495)
+
+[node name="Environment3" parent="." unique_id=695400206 instance=ExtResource("2_naqjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -28.531036)
+
+[node name="SpawnTrigger" type="Area3D" parent="." unique_id=78692489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.548437, 0, -15.022114)
+script = ExtResource("3_naqjy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnTrigger" unique_id=418161379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2871094, 0.8623047, 5.935791)
+shape = SubResource("BoxShape3D_eruna")
+
+[node name="StartMarker" type="Marker3D" parent="." unique_id=1044166586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.159924, 0, 0)
+
+[node name="EndMarker" type="Marker3D" parent="." unique_id=374589939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.142845, 0, 0)
+
+[connection signal="body_entered" from="SpawnTrigger" to="SpawnTrigger" method="_on_body_entered"]

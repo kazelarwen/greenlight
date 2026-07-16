@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d37h8slpcnfdc" path="res://assets/bigasset/assetupdate02 (1)_image (1).png" id="4_bx20c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w04y5"]
-size = Vector3(6.9919987, 5.6510468, 15.6521)
+size = Vector3(5.783156, 5.6510468, 15.012085)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jma5c"]
 resource_name = "Material.059"
@@ -374,7 +374,7 @@ shadow_mesh = SubResource("ArrayMesh_yb0vr")
 script = ExtResource("1_tvx0x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1192904777]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0045004, 3.3401718, 3.44104)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0611646, 3.3401718, 3.7610474)
 shape = SubResource("BoxShape3D_w04y5")
 
 [node name="jeep1" type="MeshInstance3D" parent="." unique_id=1730017029]

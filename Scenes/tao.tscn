@@ -18,6 +18,11 @@ shape = SubResource("BoxShape3D_bx8n8")
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.2, -0.7, 0.3)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=36433301]
-transform = Transform3D(-0.999999, -0.00073521875, 0.0012175128, -0.0005530072, 0.98966116, 0.14342418, -0.0013103689, 0.14342338, -0.9896606, -1.1041887e-07, 9.212631, -12.237916)
+transform = Transform3D(-0.999999, -0.000735239, 0.0012175043, -0.00019502678, 0.91881853, 0.39468017, -0.0014088495, 0.39467955, -0.91881794, -3.289758e-07, 9.212631, -7.237916)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=1503922733]
+transform = Transform3D(0.8905175, -0.09880933, 0.4440892, 0.112086006, 0.9936916, -0.0036671408, -0.44092542, 0.053041823, 0.895975, -0.91183907, 9.828098, 15.041857)
+visible = false
+shadow_enabled = true
 
 [editable path="student"]

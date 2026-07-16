@@ -8,8 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://bfoy6npsolsuk" path="res://Scenes/environments/environment_3.tscn" id="7_344ge"]
 [ext_resource type="PackedScene" uid="uid://b88n80pay38ah" path="res://Scenes/environments/environment_2.tscn" id="8_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://cadh7gfkrgvu" path="res://Scenes/environment_4.tscn" id="8_ynf5e"]
-[ext_resource type="PackedScene" uid="uid://c5ow5xf8llv8" path="res://Scenes/1_st.tscn" id="9_hptm8"]
-[ext_resource type="PackedScene" uid="uid://b52hyx0t3q05h" path="res://Scenes/2_nd.tscn" id="10_d1ilt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5h11f"]
 size = Vector3(106, 5, 1)
@@ -25,7 +23,8 @@ autostart = true
 [node name="HUD" parent="." unique_id=847975927 instance=ExtResource("5_lquwl")]
 
 [node name="tao" parent="." unique_id=351256526 instance=ExtResource("3_h2yge")]
-transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -42.265205, 0.5, 15.881315)
+transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -18.4, 0, 6.171)
+visible = false
 
 [node name="EnvironmentManager" type="Node3D" parent="." unique_id=36903151]
 script = ExtResource("4_21xkr")
@@ -35,25 +34,18 @@ environments_node = NodePath("../Environments")
 
 [node name="Environment1" parent="Environments" unique_id=1297251226 instance=ExtResource("6_2cqfq")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.769756, 0, 40)
-visible = false
 
 [node name="Environment2" parent="Environments" unique_id=150736443 instance=ExtResource("8_2cqfq")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.5, 0, 65)
-visible = false
 
-[node name="Environment3" parent="Environments" unique_id=695400206 instance=ExtResource("7_344ge")]
+[node name="Environment_3" parent="Environments" unique_id=695400206 instance=ExtResource("7_344ge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4, 0, -27)
-visible = false
 
 [node name="Environment4" parent="Environments" unique_id=823885579 instance=ExtResource("8_ynf5e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.071785, 0, 0)
-visible = false
 
-[node name="1st" parent="Environments" unique_id=436586115 instance=ExtResource("9_hptm8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 0)
-
-[node name="2nd" parent="Environments" unique_id=829021067 instance=ExtResource("10_d1ilt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 0)
+[node name="tao2" parent="." unique_id=300608705 instance=ExtResource("3_h2yge")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -64.92, 0.3, -6.025)
 
 [node name="Side" type="Node3D" parent="." unique_id=325870185]
 

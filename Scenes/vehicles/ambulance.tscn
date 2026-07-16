@@ -181,3 +181,5 @@ shape = SubResource("BoxShape3D_e38sy")
 [node name="ambulance" type="MeshInstance3D" parent="." unique_id=893920183]
 transform = Transform3D(2.9286645e-07, -6.7, -1.0116719e-06, -6.7, -2.928663e-07, -1.0915688e-06, 1.0915688e-06, 1.011672e-06, -6.7, -1.2046208, 2.8932202, -4.1587353)
 mesh = SubResource("ArrayMesh_op6w1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cig44aerrwbrr" path="res://assets/bigasset/bus_trike_betterEbike_Screenshot 2026-07-14 184047.png" id="3_hj1q7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qa5ht"]
-size = Vector3(4.918457, 4, 4.8237305)
+size = Vector3(4.918457, 4, 3.64917)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g70q4"]
 resource_name = "Material.080"
@@ -620,7 +620,7 @@ shadow_mesh = SubResource("ArrayMesh_7rfsh")
 script = ExtResource("1_f7o1y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=394116196]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 2, -1.212)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 2, -1.7992803)
 shape = SubResource("BoxShape3D_qa5ht")
 
 [node name="Rtrike" type="MeshInstance3D" parent="." unique_id=740621906]
