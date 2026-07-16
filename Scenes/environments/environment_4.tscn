@@ -6,6 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://s7k286cq6ydv" path="res://assets/bigasset/assetupdate02 (1)_Screenshot 2026-07-14 184104.png" id="4_vofng"]
 [ext_resource type="Texture2D" uid="uid://bngq2ryyi4bw0" path="res://assets/floor/modularassetglb_Screenshot 2026-07-13 130705.png" id="5_4yrla"]
 [ext_resource type="Texture2D" uid="uid://cakrokp4vsehp" path="res://assets/bigasset/assetupdate02 (1)_Screenshot 2026-07-13 115936.png" id="6_7gjd2"]
+[ext_resource type="PackedScene" uid="uid://c2l74nuu83hp5" path="res://Scenes/vehicles/kotse.tscn" id="7_ovec3"]
+[ext_resource type="PackedScene" uid="uid://cttu340ur2nq4" path="res://Scenes/vehicles/red_ebike.tscn" id="8_4yrla"]
+[ext_resource type="PackedScene" uid="uid://cdbbo751fi31m" path="res://Scenes/vehicles/ambulance.tscn" id="9_7gjd2"]
+[ext_resource type="PackedScene" uid="uid://b4d308jhbdygy" path="res://Scenes/vehicles/r_jeep.tscn" id="10_er2qc"]
+[ext_resource type="PackedScene" uid="uid://pt7iytpjhonf" path="res://Scenes/vehicles/g_jeep.tscn" id="11_gq34i"]
+[ext_resource type="PackedScene" uid="uid://bab68x2r3eesq" path="res://Scenes/vehicles/r_bus.tscn" id="12_3ooat"]
+[ext_resource type="PackedScene" uid="uid://cfkerlrjftfo2" path="res://Scenes/vehicles/g_tric.tscn" id="13_0xgfq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ia5wj"]
 size = Vector3(15.398499, 0.45983887, 24.898743)
@@ -1015,3 +1022,53 @@ mesh = SubResource("ArrayMesh_kq1bu")
 [node name="posterlong3" type="MeshInstance3D" parent="Node3D/posters" unique_id=1715687655]
 transform = Transform3D(-0.35504922, 0, 0.7113123, 0, 0.79500014, 0, -0.7113123, 0, -0.35504922, 2.3807182, 0.531, 10.068256)
 mesh = SubResource("ArrayMesh_kq1bu")
+
+[node name="kotse" parent="." unique_id=783730654 instance=ExtResource("7_ovec3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9332294, 0, 43.89039)
+
+[node name="red_ebike" parent="." unique_id=939431355 instance=ExtResource("8_4yrla")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.609976, 0.8, 34.21763)
+move_left = false
+
+[node name="ambulance" parent="." unique_id=428918603 instance=ExtResource("9_7gjd2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1240196, 0.8, 19.770416)
+move_left = false
+
+[node name="rJeep" parent="." unique_id=1255572372 instance=ExtResource("10_er2qc")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.4555454, -0.5, 6.2966385)
+
+[node name="gJeep" parent="." unique_id=1107485911 instance=ExtResource("11_gq34i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.104485, 0, -8.371815)
+move_left = false
+
+[node name="rBus" parent="." unique_id=596384986 instance=ExtResource("12_3ooat")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.3703003, 0.3, -17.95745)
+
+[node name="gTric" parent="." unique_id=1270222012 instance=ExtResource("13_0xgfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.147495, 0.3, -41.39653)
+move_left = false
+
+[node name="gTric2" parent="." unique_id=1283211748 instance=ExtResource("13_0xgfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.147495, 0.3, -32.333282)
+move_left = false
+
+[node name="gTric3" parent="." unique_id=1011844147 instance=ExtResource("13_0xgfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.147495, 0.3, -23.66874)
+move_left = false
+
+[node name="gJeep2" parent="." unique_id=1184619248 instance=ExtResource("11_gq34i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.104485, 0, -62.423935)
+move_left = false
+
+[node name="ambulance2" parent="." unique_id=329262759 instance=ExtResource("9_7gjd2")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.476734, 0.8, -44.863426)
+
+[node name="rBus2" parent="." unique_id=170374087 instance=ExtResource("12_3ooat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.546677, 0.3, 48.542675)
+move_left = false
+
+[node name="red_ebike2" parent="." unique_id=1355400184 instance=ExtResource("8_4yrla")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.7826347, 0.8, 28.195156)
+
+[node name="gTric4" parent="." unique_id=2134733244 instance=ExtResource("13_0xgfq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.4001064, 0.3, 58.847282)
